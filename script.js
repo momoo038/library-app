@@ -1,10 +1,16 @@
 const myLibrary = [];
 
-function Book(name, year, author, id) {
-  this.name = name;
-  this.year = year;
-  this.author = author;
-  this.id = id;
+class Book {
+  constructor(name, year, author, id, read = false) {
+    this.name = name;
+    this.year = year;
+    this.author = author;
+    this.id = id;
+    this.read = read;
+  }
+  toggleRead() {
+    this.read = !this.read;
+  }
 }
 
 function addBook(name, year, author, id) {
@@ -40,9 +46,9 @@ function displayLibrary() {
 
     readButton.addEventListener("click", (e) => {
       const bookId = e.target.dataset.id;
-      const bookIndex = myLibrary.findIndex(b => b.id === bookId);
-      if (bookIndex > -1) {
-        myLibrary[bookIndex].read = !myLibrary[bookIndex].read;
+      const book= myLibrary.find(b => b.id === bookId);
+      if (book) {
+        book.toggleRead();
         displayLibrary();
       }
     });
