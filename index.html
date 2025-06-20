@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="validation.js" defer></script>
     <title>Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main">
-        <button id="btn">Add Book</button>
-        <dialog id="dialog">
-            <form method="dialog">
-              <p><label>Add your book:
-                <input type="text" name="title" id="title" placeholder="Title" required>
-                <input type="text" name="author" id="author" placeholder="Author" required>
-                <input type="number" name="year" id="year" placeholder="Year" required>
-              </label></p>
-              <menu>
-                <button value="cancel" formnovalidate>Cancel</button>
-                <button id="confirmBtn" value="default">Confirm</button>
-              </menu>
-            </form>
-          </dialog>
-        <table id="table">
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Year</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </table>
+      <button id="btn">Add Book</button>
+      <dialog id="dialog">
+        <form method="dialog">
+          <p>
+            <label
+              >Add your book:
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Title"
+                required
+              />
+              <input
+                type="text"
+                name="author"
+                id="author"
+                placeholder="Author"
+                required
+              />
+              <input
+                type="number"
+                name="year"
+                id="year"
+                placeholder="Year"
+                required
+              />
+            </label>
+          </p>
+          <menu>
+            <button value="cancel" formnovalidate>Cancel</button>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </menu>
+        </form>
+      </dialog>
+      <table id="table">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </table>
     </div>
-</body>
+  </body>
 </html>
